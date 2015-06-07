@@ -7,5 +7,18 @@
 <body>
     <h1>Hello {{ say }}!</h1>
     You just said something using Jinja and Flask!
+
+    <h2>Who are you?</h2>
+    <ul>
+        <li>
+            <a href="{{ url_for('hello_noun', noun='Adam') }}">Adam</a>
+        </li>
+        <li>
+            <a href="{{ url_for('hello_noun', noun='Geoff') }}">Geoff</a>
+        </li>
+        <li>
+            <a href="{{ url_for('hello_noun', noun='Yo') }}">Yo</a>
+        </li>
+    </ul>
 </body>
 </html>
