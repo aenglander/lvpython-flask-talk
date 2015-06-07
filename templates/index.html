@@ -3,33 +3,17 @@
 <head lang="en">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>Hello {{ say }}!</title>
+    <title>Flash Demo</title>
 </head>
 <body>
-    <h1>Hello {{ say }}!</h1>
-    You just said something using Jinja and Flask!
-
-    <h2>Who are you?</h2>
+    <h1>Flask Demo</h1>
+    <h2>Demo Segments</h2>
     <ul>
         <li>
-            <a href="{{ url_for('hello_noun', noun='Adam') }}">Adam</a>
+            <a href="{{ url_for('hello_noun') }}">Routes/URLs/Static Demo</a>
         </li>
         <li>
-            <a href="{{ url_for('hello_noun', noun='Geoff') }}">Geoff</a>
-        </li>
-        <li>
-            <a href="{{ url_for('hello_noun', noun='Yo') }}">Yo</a>
-        </li>
-        <li>
-            <img src="{{ url_for('static', filename='image.png') }}" height="200px">
-            <br/>
-            <em style="text-align:center; width: 100%">Image works!</em>
-        </li>
-        <li>
-            <div id="style-works">Style Works!</div>
-        </li>
-        <li>
-            <script src="{{ url_for('static', filename='script.js') }}"></script>
+            <a href="{{ url_for('form_show') }}">Form Demo</a>
         </li>
     </ul>
 </body>

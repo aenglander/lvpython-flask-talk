@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Say Something</title>
+</head>
+<body>
+<h1>Say Something</h1>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<h2>You said:</h2>
+<ul class=flashes>
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+{% if say %}
+<h3>{{ say }}</h3>
+{% endif %}
+
+<form method="post">
+    <input type="text" name="say" />
+    <input type="submit" value="Say It" />
+</form>
+</body>
+</html>
